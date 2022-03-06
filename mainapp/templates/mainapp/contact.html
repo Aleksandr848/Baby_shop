@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -8,28 +10,28 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
     
     <!-- CSS
 	============================================ -->
    
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     
     <!-- Icon Font CSS -->
-    <link rel="stylesheet" href="/static/css/icon-font.min.css">
+    <link rel="stylesheet" href="{% static 'css/icon-font.min.css' %}">
     
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="/static/css/plugins.css">
+    <link rel="stylesheet" href="{% static 'css/plugins.css' %}">
     
     <!-- Helper CSS -->
-    <link rel="stylesheet" href="/static/css/helper.css">
+    <link rel="stylesheet" href="{% static 'css/helper.css' %}">
     
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     
     <!-- Modernizer JS -->
-    <script src="/static/js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="{% static 'js/vendor/modernizr-3.7.1.min.js' %}"></script>
 </head>
 
 <body>
@@ -101,7 +103,7 @@
                         <!-- Logo Start -->
                         <div class="header-logo">
                             <a href="index.html">
-                                <img src="/static/images/logo.png" alt="Jadusona">
+                                <img src="{% static 'images/logo.png' %}" alt="Jadusona">
                             </a>
                         </div><!-- Logo End -->
                     </div>
@@ -111,21 +113,21 @@
                         <div class="header-shop-links">
 
                             <div class="header-search">
-                                <button class="search-toggle"><img src="/static/images/icons/search.png" alt="Search Toggle"><img class="toggle-close" src="/static/images/icons/close.png" alt="Search Toggle"></button>
+                                <button class="search-toggle"><img src="{% static 'images/icons/search.png' %}" alt="Search Toggle"><img class="toggle-close" src="{% static '' %}images/icons/close.png" alt="Search Toggle"></button>
                                 <div class="header-search-wrap">
                                     <form action="#">
                                         <input type="text" placeholder="Type and hit enter">
-                                        <button><img src="/static/images/icons/search.png" alt="Search"></button>
+                                        <button><img src="{% static 'images/icons/search.png' %}" alt="Search"></button>
                                     </form>
                                 </div>
                             </div>
 
                             <div class="header-wishlist">
-                                <a href="wishlist.html"><img src="/static/images/icons/wishlist.png" alt="Wishlist"> <span>02</span></a>
+                                <a href="wishlist.html"><img src="{% static 'images/icons/wishlist.png' %}" alt="Wishlist"> <span>02</span></a>
                             </div>
 
                             <div class="header-mini-cart">
-                                <a href="cart.html"><img src="/static/images/icons/cart.png" alt="Cart"> <span>02($250)</span></a>
+                                <a href="cart.html"><img src="{% static 'images/icons/cart.png' %}" alt="Cart"> <span>02($250)</span></a>
                             </div>
 
                         </div><!-- Header Advance Search End -->
@@ -185,7 +187,7 @@
     </div><!-- Header Section End -->
 
     <!-- Page Banner Section Start -->
-    <div class="page-banner-section section" style="background-image: url(/static/images/hero/hero-1.jpg)">
+    <div class="page-banner-section section" style="background-image: url({% static 'images/hero/hero-1.jpg' %})">
         <div class="container">
             <div class="row">
                 <div class="page-banner-content col">
@@ -227,7 +229,7 @@
 
                <div class="contact-form-wrap col-md-6 col-12 mb-40">
                    <h3>Leave a Message</h3>
-                   <form  id="contact-form" action="/static/php/mail.php">
+                   <form  id="contact-form" action="{% static 'php/mail.php' %}">
                        <div class="contact-form">
                            <div class="row">
                                <div class="col-lg-6 col-12 mb-30"><input type="text" name="name" placeholder="Your Name"></div>
@@ -251,27 +253,27 @@
                 <div class="brand-slider">
 
                     <div class="brand-item col">
-                        <img src="/static/images/brands/brand-1.png" alt="">
+                        <img src="{% static 'images/brands/brand-1.png' %}" alt="">
                     </div>
 
                     <div class="brand-item col">
-                        <img src="/static/images/brands/brand-2.png" alt="">
+                        <img src="{% static 'images/brands/brand-2.png' %}" alt="">
                     </div>
 
                     <div class="brand-item col">
-                        <img src="/static/images/brands/brand-3.png" alt="">
+                        <img src="{% static 'images/brands/brand-3.png' %}" alt="">
                     </div>
 
                     <div class="brand-item col">
-                        <img src="/static/images/brands/brand-4.png" alt="">
+                        <img src="{% static 'images/brands/brand-4.png' %}" alt="">
                     </div>
 
                     <div class="brand-item col">
-                        <img src="/static/images/brands/brand-5.png" alt="">
+                        <img src="{% static 'images/brands/brand-5.png' %}" alt="">
                     </div>
 
                     <div class="brand-item col">
-                        <img src="/static/images/brands/brand-6.png" alt="">
+                        <img src="{% static 'images/brands/brand-6.png' %}" alt="">
                     </div>
 
                 </div>
@@ -356,17 +358,17 @@
 ============================================ -->
 
 <!-- jQuery JS -->
-<script src="/static/js/vendor/jquery-3.4.1.min.js"></script>
+<script src="{% static 'js/vendor/jquery-3.4.1.min.js' %}"></script>
 <!-- Popper JS -->
-<script src="/static/js/popper.min.js"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
 <!-- Bootstrap JS -->
-<script src="/static/js/bootstrap.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
 <!-- Plugins JS -->
-<script src="/static/js/plugins.js"></script>
+<script src="{% static 'js/plugins.js' %}"></script>
 <!-- Ajax Mail -->
-<script src="/static/js/ajax-mail.js"></script>
+<script src="{% static 'js/ajax-mail.js' %}"></script>
 <!-- Main JS -->
-<script src="/static/js/main.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
 
 </body>
 
