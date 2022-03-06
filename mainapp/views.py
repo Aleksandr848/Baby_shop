@@ -1,3 +1,13 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def main(request):
+    return render(request, "mainapp/index.html")
+
+
+def shop(request):
+    return render(request, "mainapp/shop.html")
+
+
+def contact(request):
+    return render(request, "mainapp/contact.html")
