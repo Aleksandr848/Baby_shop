@@ -6,32 +6,42 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Jadusona - eCommerce Baby shop Bootstrap4 Template</title>
+    <title>
+        {% block title %}
+        {{ title }}
+        {% endblock title %}
+    </title>
+<!--    <title>Jadusona - eCommerce Baby shop Bootstrap4 Template</title>-->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
-    
+
+    {% block css %}
     <!-- CSS
 	============================================ -->
-   
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    
+
     <!-- Icon Font CSS -->
     <link rel="stylesheet" href="{% static 'css/icon-font.min.css' %}">
-    
+
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="{% static 'css/plugins.css' %}">
-    
+
     <!-- Helper CSS -->
     <link rel="stylesheet" href="{% static 'css/helper.css' %}">
-    
+
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    
+    {% endblock css %}
+
+    {% block js_top %}
     <!-- Modernizer JS -->
     <script src="{% static 'js/vendor/modernizr-3.7.1.min.js' %}"></script>
+    {% endblock js_top %}
+
 </head>
 
 <body>
@@ -41,6 +51,7 @@
     <!-- Header Section Start -->
     <div class="header-section section">
 
+      {% block header_top %}
         <!-- Header Top Start -->
         <div class="header-top header-top-one bg-theme-two">
             <div class="container-fluid">
@@ -93,12 +104,14 @@
                 </div>
             </div>
         </div><!-- Header Top End -->
+      {% endblock header_top %}
 
         <!-- Header Bottom Start -->
         <div class="header-bottom header-bottom-one header-sticky">
             <div class="container-fluid">
                 <div class="row menu-center align-items-center justify-content-between">
 
+                  {% block logo %}
                     <div class="col mt-15 mb-15">
                         <!-- Logo Start -->
                         <div class="header-logo">
@@ -107,7 +120,9 @@
                             </a>
                         </div><!-- Logo End -->
                     </div>
+                  {% endblock logo %}
 
+                  {% block header_advance_search %}
                     <div class="col order-2 order-lg-3">
                         <!-- Header Advance Search Start -->
                         <div class="header-shop-links">
@@ -132,20 +147,21 @@
 
                         </div><!-- Header Advance Search End -->
                     </div>
+                  {% endblock header_advance_search %}
 
                     <div class="col order-3 order-lg-2">
                         <div class="main-menu">
                             <nav>
                                 <ul>
-                                    <li class="active"><a href="/">HOME</a>
+                                    <li class="active"><a href="index.html">HOME</a>
                                         <ul class="sub-menu">
-                                            <li><a href="index.html">Home One</a></li>
+                                            <li class="active"><a href="index.html">Home One</a></li>
                                             <li><a href="index-2.html">Home Two</a></li>
                                             <li><a href="index-3.html">Home Three</a></li>
                                             <li><a href="index-box.html">Home Box</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="/shop/">SHOP</a>
+                                    <li><a href="shop.html">SHOP</a>
                                         <ul class="sub-menu">
                                             <li><a href="shop.html">Shop</a></li>
                                             <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
@@ -171,7 +187,7 @@
                                             <li><a href="single-blog.html">Single Blog</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="/contact/">CONTACT</a></li>
+                                    <li><a href="contact">CONTACT</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -1125,6 +1141,7 @@
         </div>
     </div><!-- Blog Section End -->
 
+  {% block brand_section %}
     <!-- Brand Section Start -->
     <div class="brand-section section section-padding pt-0">
         <div class="container-fluid">
@@ -1159,7 +1176,9 @@
             </div>
         </div>
     </div><!-- Brand Section End -->
+  {% endblock brand_section %}
 
+  {% block footer_top_section %}
     <!-- Footer Top Section Start -->
     <div class="footer-top-section section bg-theme-two-light section-padding">
         <div class="container">
@@ -1211,7 +1230,7 @@
                         <div class="mailchimp-error"></div><!-- mailchimp-error end -->
                     </div><!-- mailchimp-alerts end -->
 
-                    <h5>FOLLOW US</h5> 
+                    <h5>FOLLOW US</h5>
                     <p class="footer-social"><a href="#">Facebook</a> - <a href="#">Twitter</a> - <a href="#">Google+</a></p>
 
                 </div>
@@ -1219,7 +1238,9 @@
             </div>
         </div>
     </div><!-- Footer Top Section End -->
+  {% endblock footer_top_section %}
 
+  {% block footer_bottom_section %}
     <!-- Footer Bottom Section Start -->
     <div class="footer-bottom-section section bg-theme-two pt-15 pb-15">
         <div class="container">
@@ -1230,9 +1251,11 @@
             </div>
         </div>
     </div><!-- Footer Bottom Section End -->
+  {% endblock footer_bottom_section %}
 
 </div>
 
+{% block js_bottom %}
 <!-- JS
 ============================================ -->
 
@@ -1248,6 +1271,7 @@
 <script src="{% static 'js/ajax-mail.js' %}"></script>
 <!-- Main JS -->
 <script src="{% static 'js/main.js' %}"></script>
+{% endblock js_bottom %}
 
 </body>
 
