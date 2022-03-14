@@ -1,7 +1,10 @@
+import datetime
+
 from django.shortcuts import render
 
 
 def main(request):
+    title = "home"
     return render(request, "mainapp/index.html")
 
 
